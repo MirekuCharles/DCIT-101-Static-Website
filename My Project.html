@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="stylesheet" href="style.css">
+        <title>My Project</title>
+    </head>
+    <body>
+        <big><p style ="color:rgb(255, 251, 0)"><u>Welcome To My Website</u></p></big></u>
+       <p style="color:azure">Use this aesthetically pleasing site to view the current GMT time in Accra</p>
+
+        <div class="wrapper">
+            <div class="display">
+                <div id="time"></div>
+            </div>
+            <span></span>
+            <span></span>
+        </div>
+        <script>
+            setInterval(() => {
+         const time =
+         document.querySelector(".display #time");
+         let date = new Date();
+         let hr = date.getHours();
+         let min = date.getHours();
+         let sec = date.getSeconds();
+         let am_pm = "AM";
+         if (hr > 12){
+             am_pm = "PM";
+             hr = hr - 12;
+         }
+         if (sec < 10){
+             sec = "0"+ sec;
+         }       
+         if(min < 10){
+             min = "0" + min;
+         }
+         if( hr < 10){
+             hr = "0" + hr;
+         }
+         time.textContent = hr + ":" + min + ":" + sec +""+ am_pm;
+            });
+        </script>
+    </body>
+</html>
+<!--For my website project i developed a glowing clock-->
